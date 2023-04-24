@@ -1,7 +1,7 @@
 import React from 'react';
 import './Table.css';
 
-const Table = (data, onChange) => {
+const Table = (data) => {
 
     return (
         <>
@@ -24,13 +24,7 @@ const Table = (data, onChange) => {
                             <th scope="row">{store.name}</th>
 
                             {store.months.map(month => (
-                                <td key={month.id}>
-                                    <input
-                                        type="number"
-                                        placeholder={month.value}
-                                        onChange={() => onChange()}
-                                    />
-                                </td>))}
+                                <td key={month.id}>{month.value}</td>))}
 
                             <td className="text-danger">{store.sum}</td>
                         </tr>))}

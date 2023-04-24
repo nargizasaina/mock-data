@@ -5,7 +5,7 @@ import Table from "./Table";
 class Main extends Component {
     state = {
         json: json
-    }
+    };
 
     calc() {
         const data = {
@@ -14,7 +14,7 @@ class Main extends Component {
         };
 
         for (const item of json) {
-            const store = {}
+            const store = {};
             store.name = item.store.name;
             store.months = item.months;
 
@@ -36,11 +36,7 @@ class Main extends Component {
         })
         data.total.SUM = totalSum;
         return data;
-    }
-
-    onChange() {
-        
-    }
+    };
 
     render() {
         return (
@@ -54,12 +50,11 @@ class Main extends Component {
                 <main className="container">
                     <Table
                         data={this.calc()}
-                        onChange={this.onChange()}
                     />
                 </main>
             </>
         )
     }
-}
+};
 
 export default Main;
