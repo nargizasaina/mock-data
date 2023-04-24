@@ -1,4 +1,5 @@
 # Mock Data
 
-npm i
-npm start to run the app
+* npm i
+
+* npm start to run the app
